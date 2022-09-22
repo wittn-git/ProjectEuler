@@ -32,7 +32,7 @@ int main(){
     it current;
     while(!isPalindrome(current.const_factor*current.current_factor)){
         current.current_factor--;
-        queue.push(current);
+        if(current.current_factor > 0) queue.push(current);
         current = queue.top();
         queue.pop();
     }
